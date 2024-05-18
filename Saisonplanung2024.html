@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restricted Access</title>
+    <script>
+        function checkAccess() {
+            // Liste der erlaubten Namen
+            const allowedNames = ['Sunny', 'Christophe', 'Fridde', 'Kathy', 'Elli', 'Melli', 'Franzi', 'Nele', 'Kay', 'Verena', 'Rolf', 'Simone', 'Marie', 'Vivien', 'Lucy', 'Chico', 'Janina', 'Malou', 'Lian', 'Ron'];
+            
+            // Den Benutzer nach seinem Namen fragen
+            const userName = prompt('Bitte geben Sie Ihren Namen ein:');
+
+            // Prüfen, ob der eingegebene Name in der Liste der erlaubten Namen enthalten ist
+            if (allowedNames.includes(userName)) {
+                // Wenn der Name erlaubt ist, zum Link weiterleiten
+                window.location.href = 'https://tinyurl.com/2dgm5lkn';
+            } else {
+                // Wenn der Name nicht erlaubt ist, eine Fehlermeldung anzeigen
+                alert('Zugriff verweigert: Sie haben keine Berechtigung, diese Seite zu betreten.');
+            }
+        }
+    </script>
+</head>
+<body onload="checkAccess()">
+    <h1>Willkommen</h1>
+    <p>Bitte geben Sie Ihren Namen ein, um Zugriff auf die Tabelle zu erhalten.</p>
+</body>
+</html>
